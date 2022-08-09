@@ -1,0 +1,805 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+body{font-family: lato, Verdana;}
+
+header{width: 100%;}
+
+header > figure{margin-top: -1px;}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    background: #03444a;
+}
+
+nav figure{
+	width: 90%;
+    text-align: center;
+}
+
+#hamburguesa{width: 2.5em;}
+
+#hamburguesa li{
+	list-style: none;
+    text-indent: -100px;
+    overflow: hidden;
+    width: 2.5em;
+}
+
+#hamburguesa li a {
+    background: url("../img/menu.png") no-repeat center center;
+    background-size: cover;
+    display: block;
+    height: 2.5em;
+}
+
+#hamburguesa li:last-child {display: none;}
+
+nav:target #barra {left: 0;}
+
+nav:target #hamburguesa li:first-child {display: none;}
+
+nav:target #hamburguesa li:last-child {display: block;}
+
+#barra { 
+	width: 60%;
+    position: absolute;
+    top: 3.5em;
+    left: -100%;
+    background: #03444a;
+    transition: left .5s ease;
+    padding: .5em;
+}
+
+#barra ul{width: 70%;}
+
+#barra li {
+    list-style: none;
+    width: 90%;
+    display: inline-block;
+}
+
+#barra li a {
+    text-decoration: none;
+    display: block;
+    background: #03444a;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 3em;
+    padding: .5em;
+}
+
+#barra li a:hover, .menu_footer li a:hover {
+    color: #ecbd3b;
+    font-weight: bold;
+}
+
+.arriba{
+	display: block;
+	width: 1.3em;
+    height: 1.3em;
+    left: 83%;
+    top: 85%;
+    position: fixed;
+    font-size: 37px;
+    color: #096c6d;
+    background: #ecbd3ba3;
+    border-radius: 10px;
+    padding-top: 8px;
+    padding-left: 13px;
+    overflow: hidden;
+}
+
+h1 {font-size: 0;}
+
+
+/*---- MAIN ----*/
+
+h2 {
+	font-family: Pacifico;
+	font-weight: 100;
+	color: #096C6D;
+	font-size: 18px;
+	padding: 1em;
+	text-align: center;
+}
+
+h3 {
+	font-weight: 800;
+	font-size: 13px;
+	color: #474747;
+	text-transform: uppercase;
+	padding: .75em;
+	text-align: center;
+}
+
+a {text-decoration: none;}
+
+p {
+	color: #474747;
+	font-size: 14px;
+	padding: .5em;
+	text-align: center;
+}
+
+#habitos, #alimentacion, #consejos {background: white;}
+
+article {
+	min-width: 320px;
+	margin: auto;
+	padding: 1.5em;
+	max-width: 420px;
+}
+
+ul.iconos {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+	align-items: center;
+	list-style: none;
+	overflow-y: hidden;
+	margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.iconos li{
+	height: 98%;
+    padding: .5em;
+    margin: .2em;
+    text-align: center;
+    border: 1px solid #00656952;
+    border-radius: 1em;
+    overflow-y: hidden;
+}
+
+.iconos li img{
+	width: 100vw;
+    height: calc(100vw * 86 / 86);
+    max-width: 86px;
+    max-height: 86px;
+    margin: auto;
+}
+
+.factores{background: url(../img/factores_movil.jpg) no-repeat right;}
+
+.factores h2, #saludable h2, .aprendemos h2{color: white;}
+
+.factores article{background: #096c6dba;}
+
+.factores p, #saludable p, .aprendemos p{
+	color: white;
+	text-align: left;
+}
+
+#newsletter{
+	background: #ecbd3b;
+	padding: 2.5em;
+	text-align: center;
+}
+
+#newsletter form{
+	max-width: 465px;
+	margin: auto;
+}
+
+form label{
+	color: #474747;
+    padding: .5em;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input{
+	border: 1px solid #00656952;
+    border-radius: 16px;
+    padding: 0.4em;
+    width: 80%;
+}
+
+input[type="submit"]{
+	width: 80%;
+    padding: 0.7em;
+    background: #03444a;
+    border: 1px solid #03444a;
+    border-radius: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Lato, Verdana;
+    margin-top: 1em;
+}
+
+input:focus, textarea:focus {background: #ececec;}
+
+#alimentacion article p{text-align: left;}
+
+#alimentacion ul{
+	display: grid;
+    list-style: none;
+    overflow-y: hidden;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+#alimentacion li {
+    height: 98%;
+    padding: .5em;
+    margin: .2em;
+    border: 1px solid #00656952;
+    border-radius: 1em;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+#alimentacion li img{
+	width: 100vw;
+    height: calc(100vw * 74 / 115);
+    max-width: 115px;
+    max-height: 74px;
+    margin: auto;
+}
+
+#alimentacion li p{text-align: center;}
+
+#saludable{background: url(../img/dieta_movil.jpg) no-repeat center;}
+
+#saludable article{
+	background: #03444aba; /*#03444a*/
+	padding-bottom: 3em;
+}
+
+#saludable p a{
+	color: #ecbd3b;
+	font-weight: bolder;
+}
+
+#comida{background: url(../img/comidas_movil.jpg) no-repeat center;}
+
+#comida h2, #contacto h2{color: #474747;}
+
+#comida article{
+	background: #ecbd3bbd;/*#ecbd3b*/
+	padding-bottom: 3em;
+}
+
+#comida p{
+	color: #474747;
+	text-align: left;
+}
+
+#comida p a{
+	color: #03444a;
+	font-weight: bolder;
+}
+
+.comida{display: none;}
+
+section:target .comida{display: block;}
+
+section:target .mas{display: none;}
+
+#consejos article{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-bottom: 1em;
+}
+
+#consejos ul{grid-column: 1/4;}
+
+#consejos li{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#consejos h2{grid-column: 1/4;}
+
+#consejos h3{
+	grid-column-start: 1;
+	font-family: Pacifico;
+	font-size: 22px;
+}
+
+#consejos li:nth-child(1n) h3{color: #03444a;}
+
+#consejos li:nth-child(3n) h3{color: #ecbd3b;}
+
+#consejos li:nth-child(3n+2) h3{color: #096C6D;}
+
+#consejos p{
+	grid-column: 2/8;
+	text-align: left;
+	align-self: center;
+	padding: .5em;
+}
+
+.aprendemos{background: #096C6D;}
+
+.aprendemos figure {
+    font-size: 0;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+.video{
+    width: 60vw;
+    height: calc(60vw * 315 / 560);
+    max-width: 560px;
+    max-height: 315px;
+    margin: auto;
+}
+
+.aprendemos iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#contacto{background: #ecbd3b;}
+
+#contacto ul{margin: auto;}
+
+#contacto li{padding: 1em;}
+
+#contacto form{margin: auto;}
+
+#contacto input{
+	width: 90%;
+    margin: .5em;
+}
+
+#contacto textarea{
+	width: 90%;
+    margin: .5em;
+    height: 5em;
+    border: 1px solid #00656952;
+    border-radius: 16px;
+    padding: 0.4em;
+    margin-bottom: 1em;
+}
+
+#contacto label{margin: auto;}
+
+#contacto h3{
+	font-family: Pacifico;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#contacto img{
+	border: 0;
+	border-radius: 150px;
+}
+
+#contacto figure{text-align: center;}
+
+/*---- Ventana modal----*/
+
+.modalmask{
+	width: 100%;
+    position: fixed;
+    font-family: "Lato";
+	font-weight: bold;
+	color: #6b6b6b;
+	text-align: center;
+	padding: 3em;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(3 68 74 / 82%);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalmask:target{
+    opacity:1;
+    pointer-events: auto;
+    display: block;
+}
+
+.modalbox{
+    width: 400px;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+    display: none;    
+}
+
+#terminos .modalbox{
+	width: 90%;
+	padding: 2em;
+	font-weight: normal;
+	text-transform: none;
+}
+
+#terminos .modalbox p{
+	text-align: left;
+}
+
+#terminos h4{
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.movedown{margin: 0 auto;}
+
+.modalmask:target .movedown{       
+    margin: auto;
+    display: block;
+}
+ 
+.modalmask:target .resize{
+    width:400px;
+    height:200px;
+}
+
+.close{
+    background: #03444a;
+    color: white;
+    line-height: 25px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius:13px;
+}
+ 
+.close:hover{background: #ecbd3b;}
+
+
+/* ---- FOOTER ----*/
+
+footer{
+	width: 100%;
+	background: #03444a;
+    padding: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer div{
+	width: 900px;
+	padding: 1.5em;
+	display: grid;
+	justify-items: center;
+	text-transform: uppercase;
+}
+
+footer img{
+	width: 100%;
+    max-width: 922px;
+    height: auto;
+	padding: .5em;
+}
+
+footer ul{
+	width: 80%;
+	padding: .5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer ul li{
+	display: inline-block;
+	text-align: center;
+}
+
+footer a{  
+	font-size: 14px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.rrss{border-bottom: 1px solid #096C6D;}
+
+.terminos a, .terminos p{
+	color: #096C6D;
+	text-transform: none;
+	justify-content: center;
+}
+
+
+/* ---- TABLET ----*/
+
+@media screen and (min-width: 577px) {
+
+	.arriba{
+		display: block;
+		width: 1.3em;
+	    height: 1.3em;
+	    left: 90%;
+	    top: 85%;
+	    position: fixed;
+	    font-size: 37px;
+	    color: #096c6d;
+	    background: #ecbd3ba3;
+	    border-radius: 10px;
+	    padding-top: 8px;
+	    padding-left: 13px;
+	    overflow: hidden;
+	}
+
+	.arriba:hover{
+	    box-shadow: 6px 0px 12px #096c6dba;
+		cursor: pointer;
+	}
+
+	h2{
+		font-size: 22px;
+		text-align: center;
+	}
+
+	.iconos li img{
+	    height: calc(100vw * 114 / 114);
+	    max-width: 114px;
+	    max-height: 114px;
+	}
+
+	h3{font-size: 14px;}
+
+	p{text-align: center;}
+
+	article{min-width: 550px;}
+
+	.factores{background: url(../img/factores_tablet.jpg) no-repeat right;}
+
+	#newsletter form{max-width: 660px;}
+
+	form input{width: 50%;}
+
+	input[type="submit"]{
+		width: 30%;
+	    padding: .5em;
+	    margin-left: -2em;
+	    margin-top: 0em;
+	}
+
+	#alimentacion article p{text-align: center;}
+
+	#alimentacion ul{
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto;
+	}
+
+	#alimentacion li img{
+	    height: calc(100vw * 99 / 153);
+	    max-width: 153px;
+	    max-height: 99px;
+	}
+
+	#saludable{background: url(../img/dieta_tablet.jpg) no-repeat center;}
+
+	#comida {background: url(../img/comidas_tablet.jpg) no-repeat center;}
+
+	#consejos article{
+		padding-left: 10%;
+    	padding-right: 10%;
+	}
+
+	.video{
+    	width: 50vw;
+    	height: calc(50vw * 315 / 560);
+	}
+
+	footer div ul.terminos{
+		display: block;
+		margin: auto;
+		text-align: center;
+	}
+}
+
+
+/* ---- PC ----*/
+
+@media screen and (min-width: 991px) {
+
+	.arriba{left: 93%;}
+
+    nav figure{
+    	width: 35%;
+    	text-align: left;
+    	margin-left: 3%;
+    }
+
+    #hamburguesa {display: none;}
+
+    #menu {width: 100%;}
+
+    #barra {
+    	width: 70%;
+		position: static;
+		padding: 0;
+        display: flex;
+        justify-content: flex-end;
+	}
+
+	#barra li{width: auto;}
+
+	#barra li a{margin-left: 0;}
+
+	h2{font-size: 25px;}
+
+	p{font-size: 16px;}
+
+	article{min-width: 900px;}
+
+	ul.iconos {
+		grid-template-columns: 25% 25% 25% 25%;
+		grid-template-rows: auto;
+	}
+
+	.iconos li{border: 0px;}
+
+	.iconos li img{
+	    height: calc(100vw * 143 / 143);
+	    max-width: 143px;
+	    max-height: 143px;
+	}
+
+	.iconos, #alimentacion li p{font-size: 14px;}
+
+	.factores{background: url(../img/factores_pc.jpg) no-repeat center #096C6D;}
+
+	.factores article, #saludable article, #comida article {
+		background: none;
+		padding-bottom: 2.5em;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.factores p, #comida p{
+		grid-column-start: 1;
+		padding-right: 4em;
+		padding-left: 4%;
+	}
+
+	#newsletter form{max-width: 1000px;}
+	
+	form input{width: 40%;}
+
+	input[type="submit"]{width: 20%;}
+
+	#alimentacion ul{
+	    grid-template-columns: 1fr 1fr 1fr;
+	    grid-template-rows: auto auto;
+	}
+
+	#alimentacion li img{
+	    height: calc(100vw * 123 / 190);
+	    max-width: 190px;
+	    max-height: 123px;
+	}
+
+	#saludable{background: url(../img/dieta_pc.jpg) no-repeat center;}
+
+	#saludable h2{
+		grid-column-start: 2;
+		text-align: left;
+		align-self: center;
+		padding-left: 2.5em;
+	}
+
+	#saludable p{
+		grid-column-start: 2;
+		padding-left: 4em;
+	}
+
+	#saludable p a{display: none;}
+
+	#comida {background: url(../img/comidas_pc.jpg) no-repeat center;}
+
+	.factores h2, #comida h2{
+		grid-column-start: 1;
+		text-align: left;
+		align-self: center;
+		padding-left: .7em;
+	}
+
+	#consejos ul{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+	}
+
+	#consejos ul li:nth-child(-n+4){grid-column: 1;}
+
+	#consejos ul li:nth-last-child(-4n+4){
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	#consejos ul li:nth-child(6){
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	#consejos ul li:nth-child(7){
+		grid-column: 2;
+		grid-row: 3;
+	}
+
+	.aprendemos article{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.aprendemos h2{	grid-column: 1/3;}
+
+	.aprendemos p{
+		text-align: left;
+		grid-column: 1/2;
+	}
+
+	.aprendemos :nth-child(2){align-self: end;}
+
+	.aprendemos :nth-child(2){align-self: end;}
+
+	.aprendemos figure{
+		grid-column: 2/3;
+		grid-row: 2/4;
+	}
+
+	.video{
+		width: 30vw;
+    	height: calc(30vw * 315 / 560);
+	}
+
+	#contacto article{padding-bottom: 3em;}
+
+	#contacto ul{
+		display: grid;
+		grid-template-columns: 70% 30%;
+	}
+
+	#contacto textarea{ height: 7em; }
+
+	footer ul{
+		padding: 1em;
+	    width: 100%;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: center;
+	}
+}
+
+/* ---- Pantallas superiores a 1500px ---- */
+
+@media screen and (min-width: 1500px){
+
+	body{background: white;}
+
+	article{min-width: 1200px;}
+
+	h2{font-size: 25px;}
+
+	.video{
+		width: 20vw;
+    	height: calc(20vw * 315 / 560);
+	}
+    
+}
